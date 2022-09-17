@@ -1,4 +1,5 @@
 // Dependencies
+import { BrowserRouter, Route, Link } from "react-router-dom";
 import React from "react";
 import "bootstrap/dist/css/bootstrap.min.css";
 
@@ -6,17 +7,19 @@ import "bootstrap/dist/css/bootstrap.min.css";
 import Footer from "./components/Footer/Footer";
 import Header from "./components/Header/Header";
 import LandingPage from "./screens/LandingPage/LandingPage";
+import MyNotes from "./screens/MyNotes/MyNotes";
 
-function App() {
+const App = () => {
   return (
-    <div>
+    <BrowserRouter>
       <Header />
       <main>
-        <LandingPage />
+        <Route path="/" component={LandingPage} exact />
+        <Route path="/mynotes" component={MyNotes} />
       </main>
       <Footer />
-    </div>
+    </BrowserRouter>
   );
-}
+};
 
 export default App;

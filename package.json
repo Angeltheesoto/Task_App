@@ -6,7 +6,7 @@
   "scripts": {
     "start": "nodemon back-end/server.js"
   },
-  "author": "Angel",
+  "author": "Angel Soto",
   "license": "ISC",
   "dependencies": {
     "dotenv": "^16.0.2",
