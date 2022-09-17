@@ -15,7 +15,17 @@ Installed in order
 ---- Packages for the front end ----
 [npx create-react-app {name of app}] : gives you boilerplate stuff for a front end app.
 [npm i react-bootstrap bootstrap] : is a css library that makes it easier to style. In app.js add [import "bootstrap/dist/css/bootstrap.min.css"]
-[npm i react-router-dom] :
+[nnpm i react-router-dom@5.0.0] : Make sure it is this version.
+[npm i axios] : It helps make api calls easier than using fetch.
+[npm i concurrently] : lets you start front end and backend together. Install in root folder. Make changes to the root package.json folder => npm run dev
+
+```
+"scripts": {
+    "start": "nodemon back-end/server.js",
+    "client": "npm start --prefix {file name}",
+    "dev": "concurrently \"npm start\" \"npm run client\""
+  }
+```
 
 ## NOTES
 
