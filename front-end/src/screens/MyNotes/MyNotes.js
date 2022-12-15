@@ -1,14 +1,7 @@
 import React, { useState, useEffect } from "react";
 import MainScreen from "../../components/MainScreen";
-import { Accordion, Badge, Button, Card } from "react-bootstrap";
-import {
-  BrowserRouter as Router,
-  Switch,
-  Route,
-  Link,
-  useParams,
-  useRouteMatch,
-} from "react-router-dom";
+import { Badge, Button, Card } from "react-bootstrap";
+import { Link } from "react-router-dom";
 import axios from "axios";
 
 const MyNotes = () => {

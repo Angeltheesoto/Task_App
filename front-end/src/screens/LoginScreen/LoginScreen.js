@@ -4,8 +4,10 @@ import { Link } from "react-router-dom";
 import { Form, Button, Row, Col } from "react-bootstrap";
 import "./LoginScreen.css";
 import axios from "axios";
+import Loading from "../../components/Loading";
+import ErrorMessage from "../../components/Header/ErrorMessage";
 
-const LoginScreen = () => {
+const LoginScreen = ({ history }) => {
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
   const [error, setError] = useState(false);
@@ -38,6 +40,7 @@ const LoginScreen = () => {
       setLoading(false);
     } catch (error) {
       setError(error.response.data.message);
+      setLoading(false);
     }
 
     // console.log(email, password);
@@ -46,6 +49,8 @@ const LoginScreen = () => {
   return (
     <MainScreen title="LOGIN">
       <div className="loginContainer">
+        {error && <ErrorMessage variant="danger">{error}</ErrorMessage>}
+        {loading && <Loading />}
         <Form onSubmit={submitHandler}>
           <Form.Group className="mb-3" controlId="formBasicEmail">
             <Form.Label>Email address</Form.Label>
