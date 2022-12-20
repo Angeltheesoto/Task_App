@@ -1,6 +1,6 @@
 // Dependencies
 import { BrowserRouter, Route } from "react-router-dom";
-import React from "react";
+import React, { useState } from "react";
 import "bootstrap/dist/css/bootstrap.min.css";
 
 // Components
@@ -14,16 +14,19 @@ import CreateNote from "./screens/CreateNote/CreateNote";
 import SingleNote from "./screens/SingleNote/SingleNote";
 
 const App = () => {
+  const [search, setSearch] = useState("");
+  console.log(search);
   return (
     <BrowserRouter>
-      <Header />
+      <Header setSearch={setSearch} />
       <main>
         <Route path="/" component={LandingPage} exact />
         <Route path="/login" component={LoginScreen} />
         <Route path="/register" component={RegisterScreen} />
         <Route path="/createnote" component={CreateNote} />
         <Route path="/note/:id" component={SingleNote} />
-        <Route path="/mynotes" component={MyNotes} />
+        {/* <Route path="/mynotes" component={MyNotes} /> */}
+        <Route path="/mynotes" component={() => <MyNotes search={search} />} />
       </main>
       <Footer />
     </BrowserRouter>
