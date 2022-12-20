@@ -16,6 +16,9 @@ const MyNotes = () => {
   const userLogin = useSelector((state) => state.userLogin);
   const { userInfo } = userLogin;
 
+  const noteCreate = useSelector((state) => state.noteCreate);
+  const { success: successCreate } = noteCreate;
+
   const deleteHandler = (id) => {
     if (window.confirm("Are you sure?")) {
     }
@@ -30,7 +33,7 @@ const MyNotes = () => {
     if (!userInfo) {
       history.push("/");
     }
-  }, [dispatch]);
+  }, [dispatch, successCreate, history, userInfo]);
 
   return (
     <MainScreen title={`Welcome Back ${userInfo.name}`}>
@@ -56,9 +59,9 @@ const MyNotes = () => {
                     fontSize: 18,
                   }}
                 >
-                  <Accordion.Toggle as={Card.Text} variant="link" eventKey="0">
+                  <Accordion.Header as={Card.text} variant="link" eventKey="0">
                     {note.title}
-                  </Accordion.Toggle>
+                  </Accordion.Header>
                 </span>
                 <div>
                   <Button href={`/note/${note._id}`}>Edit</Button>
@@ -71,7 +74,7 @@ const MyNotes = () => {
                   </Button>
                 </div>
               </Card.Header>
-              <Accordion.Collapse eventKey="0">
+              <Accordion.Body eventKey="0">
                 <Card.Body>
                   <h4>
                     <Badge variant="success">Category - {note.category}</Badge>
@@ -87,7 +90,7 @@ const MyNotes = () => {
                     </footer>
                   </blockquote>
                 </Card.Body>
-              </Accordion.Collapse>
+              </Accordion.Body>
             </Card>
           </Accordion>
         ))}
