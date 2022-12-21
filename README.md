@@ -24,6 +24,12 @@ Frontend --
 [react-router-dom] - lets you change content on click in page.
 [axios] - links backend and frontend. Makes api calls easy.
 [] -
+
+.env
+.env.local
+.env.development.local
+.env.test.local
+.env.production.local
 -->
 
 Note Zipper is a full-stack app to store all your notes in one safe place.
