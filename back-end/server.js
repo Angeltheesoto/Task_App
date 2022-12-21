@@ -5,6 +5,7 @@ const connectDB = require("./config/db");
 const userRoutes = require("./routes/userRoutes");
 const noteRoutes = require("./routes/noteRoute");
 const { notFound, errorHandler } = require("./middleware/errorMiddleware");
+const { protect } = require("./middleware/authMiddleware");
 
 dotenv.config();
 connectDB();
