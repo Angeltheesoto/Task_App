@@ -16,7 +16,7 @@ const LandingPage = ({ history }) => {
         <Row>
           <div className="intro-text">
             <div>
-              <h1 className="title">Welcome to Note Zipper</h1>
+              <h1 className="title">Welcome to Docket 123</h1>
               <p className="sub-title">One Safe place for all your notes.</p>
             </div>
             <div className="buttonContainer">

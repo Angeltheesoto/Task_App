@@ -27,6 +27,7 @@ const RegisterScreen = () => {
   useEffect(() => {
     if (userInfo) {
       history.push("/mynotes");
+      window.location.reload();
     }
   }, [history, userInfo]);
 
@@ -75,7 +76,7 @@ const RegisterScreen = () => {
         {message && <ErrorMessage variant="danger">{message}</ErrorMessage>}
         {loading && <Loading />}
         <Form onSubmit={submitHandler}>
-          <Form.Group controlId="name">
+          <Form.Group controlId="name" className="margin-bottom">
             <Form.Label>Name</Form.Label>
             <Form.Control
               type="name"
@@ -85,7 +86,7 @@ const RegisterScreen = () => {
             ></Form.Control>
           </Form.Group>
 
-          <Form.Group controlId="formBasicEmail">
+          <Form.Group controlId="formBasicEmail" className="margin-bottom">
             <Form.Label>Email address</Form.Label>
             <Form.Control
               type="email"
@@ -95,7 +96,7 @@ const RegisterScreen = () => {
             />
           </Form.Group>
 
-          <Form.Group controlId="formBasicPassword">
+          <Form.Group controlId="formBasicPassword" className="mb-3">
             <Form.Label>Password</Form.Label>
             <Form.Control
               type="password"
@@ -105,7 +106,7 @@ const RegisterScreen = () => {
             />
           </Form.Group>
 
-          <Form.Group controlId="confirmPassword">
+          <Form.Group controlId="confirmPassword" className="margin-bottom">
             <Form.Label>Confirm Password</Form.Label>
             <Form.Control
               type="password"
@@ -118,15 +119,15 @@ const RegisterScreen = () => {
           {picMessage && (
             <ErrorMessage variant="danger">{picMessage}</ErrorMessage>
           )}
-          <Form.Group controlId="pic">
+          <Form.Group controlId="pic" className="margin-bottom">
             <Form.Label>Profile Picture</Form.Label>
             <Form.Control
               onChange={(e) => postDetails(e.target.files[0])}
-              // id="custom-file"
+              id="custom-file"
               type="file"
               label="Upload Profile Picture"
               accept="image/png, image/jpeg"
-              // custom
+              custom
             />
           </Form.Group>
 

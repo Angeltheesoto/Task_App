@@ -70,6 +70,7 @@ function SingleNote({ match, history }) {
             <Form.Group controlId="title">
               <Form.Label>Title</Form.Label>
               <Form.Control
+                className="margin-bottom"
                 type="title"
                 placeholder="Enter the title"
                 value={title}
@@ -80,6 +81,7 @@ function SingleNote({ match, history }) {
             <Form.Group controlId="content">
               <Form.Label>Content</Form.Label>
               <Form.Control
+                className="margin-bottom"
                 as="textarea"
                 placeholder="Enter the content"
                 rows={4}
@@ -88,7 +90,7 @@ function SingleNote({ match, history }) {
               />
             </Form.Group>
             {content && (
-              <Card>
+              <Card className="margin-bottom">
                 <Card.Header>Note Preview</Card.Header>
                 <Card.Body>
                   <ReactMarkdown>{content}</ReactMarkdown>
@@ -99,6 +101,7 @@ function SingleNote({ match, history }) {
             <Form.Group controlId="content">
               <Form.Label>Category</Form.Label>
               <Form.Control
+                className="margin-bottom"
                 type="content"
                 placeholder="Enter the Category"
                 value={category}

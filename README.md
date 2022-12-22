@@ -26,11 +26,14 @@ Frontend --
 [] -
 -->
 
-Note Zipper is a full-stack app that stores all your notes in one safe place.
+Note Zipper is a full-stack web app that stores all your notes in one safe place. Check out the website yourself with the link below!
+
+Website URL: [https://docket.herokuapp.com/](https://docket.herokuapp.com/)
 
 ## Bugs
 
 - The edit functionality is not confirming the edits when submitted.
+- When you first create an account, you have to refresh the page.
 
 ## Technologies
 

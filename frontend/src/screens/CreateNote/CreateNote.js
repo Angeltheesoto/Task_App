@@ -46,6 +46,7 @@ function CreateNote({ history }) {
             <Form.Group controlId="title">
               <Form.Label>Title</Form.Label>
               <Form.Control
+                className="margin-bottom"
                 type="title"
                 value={title}
                 placeholder="Enter the title"
@@ -56,6 +57,7 @@ function CreateNote({ history }) {
             <Form.Group controlId="content">
               <Form.Label>Content</Form.Label>
               <Form.Control
+                className="margin-bottom"
                 as="textarea"
                 value={content}
                 placeholder="Enter the content"
@@ -75,6 +77,7 @@ function CreateNote({ history }) {
             <Form.Group controlId="content">
               <Form.Label>Category</Form.Label>
               <Form.Control
+                className="margin-bottom"
                 type="content"
                 value={category}
                 placeholder="Enter the Category"

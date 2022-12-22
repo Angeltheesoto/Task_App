@@ -1,0 +1,21 @@
+.margin-bottom {
+  margin-bottom: 1rem;
+}
+
+div .card-header span {
+  margin-right: 13px;
+}
+
+.accordion-button {
+  border-radius: 10px;
+}
+
+.m-auto {
+  display: block;
+  min-width: 30%;
+}
+
+.img {
+  height: 1rem;
+  width: 1rem;
+}

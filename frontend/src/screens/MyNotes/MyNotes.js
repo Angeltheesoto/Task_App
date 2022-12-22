@@ -53,6 +53,12 @@ const MyNotes = ({ search }) => {
     successDelete,
   ]);
 
+  {
+    /* <img
+    className="img"
+    src="https://www.rd.com/wp-content/uploads/2021/04/GettyImages-988013222-scaled-e1618857975729.jpg"
+  /> */
+  }
   return (
     <MainScreen title={`Welcome Back ${userInfo.name}`}>
       <Link to="createnote">
@@ -60,6 +66,7 @@ const MyNotes = ({ search }) => {
           Create New Note
         </Button>
       </Link>
+
       {errorDelete && (
         <ErrorMessage variant="danger">{errorDelete}</ErrorMessage>
       )}

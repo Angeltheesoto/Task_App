@@ -86,7 +86,7 @@ const ProfileScreen = () => {
                 </ErrorMessage>
               )}
               {error && <ErrorMessage variant="danger">{error}</ErrorMessage>}
-              <Form.Group controlId="name">
+              <Form.Group controlId="name" className="margin-bottom">
                 <Form.Label>Name</Form.Label>
                 <Form.Control
                   type="text"
@@ -95,7 +95,7 @@ const ProfileScreen = () => {
                   onChange={(e) => setName(e.target.value)}
                 />
               </Form.Group>
-              <Form.Group controlId="email">
+              <Form.Group controlId="email" className="margin-bottom">
                 <Form.Label>Email Address</Form.Label>
                 <Form.Control
                   type="email"
@@ -104,7 +104,7 @@ const ProfileScreen = () => {
                   onChange={(e) => setEmail(e.target.value)}
                 />
               </Form.Group>
-              <Form.Group controlId="password">
+              <Form.Group controlId="password" className="margin-bottom">
                 <Form.Label>Password</Form.Label>
                 <Form.Control
                   type="password"
@@ -113,7 +113,7 @@ const ProfileScreen = () => {
                   onChange={(e) => setPassword(e.target.value)}
                 />
               </Form.Group>
-              <Form.Group controlId="confirmPassword">
+              <Form.Group controlId="confirmPassword" className="margin-bottom">
                 <Form.Label>Confirm Password</Form.Label>
                 <Form.Control
                   type="password"
@@ -125,7 +125,7 @@ const ProfileScreen = () => {
               {picMessage && (
                 <ErrorMessage variant="danger">{picMessage}</ErrorMessage>
               )}
-              <Form.Group controlId="pic">
+              <Form.Group controlId="pic" className="margin-bottom">
                 <Form.Label>Change Profile Picture</Form.Label>
                 <Form.Control
                   onChange={(e) => postDetails(e.target.files[0])}
