@@ -15,7 +15,12 @@ div .card-header span {
   min-width: 30%;
 }
 
-.img {
-  height: 1rem;
-  width: 1rem;
+.mainscreen-container {
+  display: flex;
+  justify-content: space-between;
+}
+
+.main-img {
+  height: 5rem;
+  border-radius: 10%;
 }
