@@ -28,6 +28,8 @@ Frontend --
 
 Note Zipper is a full-stack web app that stores all your notes in one safe place. Check out the website yourself with the link below!
 
+![docket image](./img/docket.png)
+
 Website URL: [https://docket.herokuapp.com/](https://docket.herokuapp.com/)
 
 ## Bugs
@@ -43,12 +45,3 @@ Website URL: [https://docket.herokuapp.com/](https://docket.herokuapp.com/)
 - MongoDB Atlas
 - Git | Github
 - React-Bootstrap
-
-<!--
-test in production mode
-Hide the dotenv files
-put the appropriate env variables in heroku
-delete build file
-npm run build
-git status/ git add ./ git commit-am/ git push heroku main
- -->
