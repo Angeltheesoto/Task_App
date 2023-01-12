@@ -26,7 +26,7 @@ Frontend --
 [] -
 -->
 
-Note Zipper is a full-stack web app that stores all your notes in one safe place. Check out the website yourself with the link below!
+Docket is a full-stack web app that stores all your notes in one safe place. Check out the website yourself with the link below!
 
 ![docket image](./img/docket.png)
 
